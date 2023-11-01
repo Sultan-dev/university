@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="942.0" style="-fx-background-color: F5EFE6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <TableView fx:id="MyTableView" layoutX="14.0" layoutY="21.0" prefHeight="407.0" prefWidth="200.0">
+        <columns>
+            <TableColumn fx:id="Number" prefWidth="50.0" />
+          <TableColumn fx:id="ProjectID" prefWidth="75.0" text="Project ID" />
+          <TableColumn fx:id="stage" prefWidth="75.0" text="Stage" />
+        </columns>
+      </TableView>
+      <BorderPane layoutX="321.0" layoutY="21.0" prefHeight="57.0" prefWidth="200.0">
+         <right>
+            <Label fx:id="MyLabel" prefHeight="17.0" prefWidth="74.0" text="id" BorderPane.alignment="CENTER" />
+         </right>
+         <left>
+            <Label prefHeight="17.0" prefWidth="65.0" text="Project ID :" BorderPane.alignment="CENTER" />
+         </left>
+      </BorderPane>
+      <Canvas fx:id="canvas" height="331.0" layoutX="237.0" layoutY="91.0" width="672.0" />
+   </children>
+</AnchorPane>

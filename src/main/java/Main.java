@@ -1,34 +1,50 @@
-import java.util.*;
-
 public class Main {
+    public static int[] a = new int[]{32,65,40,11,18,29,37,32,53};
+
     public static void main(String[] args) {
-        Scanner kb= new Scanner(System.in);
-        String status; int ID; double GPA;
-        ArrayList<Integer> list= new ArrayList<>();
-        for(int i = 0; i < 10; i++){
-            list.add(i);
-        }
-        Collections.shuffle(list);
-        Student[] students= new Student[10];
-        Random r= new Random();
-
-        for(int i= 0; i < students.length; i++){
-            if((new Random().nextInt(2) + 1) == 1){
-                ID= new Random().nextInt(202099999 - 201600000  + 1) + 201600000;
-                GPA= randomGPA();
-                students[i]= new Graduate(ID, GPA);
-            }else{
-                ID= new Random().nextInt(202099999 - 201600000 + 1) + 201600000;
-                GPA= randomGPA();
-                students[i]= new Undergraduate(ID, GPA);
-            }
-        }
-
-        for (int i= 0; i < students.length; i++){
-            students[i].displayStudent();
+        quickSort(a, 0, a.length-1);
+        System.out.println();
+        for (int h = 0; h < a.length; h++){
+            System.out.print(a[h]+",");
         }
     }
-    public static double randomGPA(){
-        return (Math.random() * (4 - 0) +0);
+
+    public static void quickSort(int[] a, int low, int high){
+        if(low < high) {
+            int w = split(a, low, high);
+            System.out.println(w);
+            quickSort(a, low, w - 1);
+            quickSort(a, w + 1, high);
+        }
+    }
+
+    public static int split(int[] a,int low, int high){
+        int i = low;
+        int x = a[low];
+
+        int k;
+        int z;
+        for(int j = low + 1; j <= high; j++){
+            if(a[j] <= x){
+                i = i+1;
+                if (i != j){
+                    k = a[i];
+                    z = a[j];
+                    a[i] = z;
+                    a[j] = k;
+                }
+            }
+        }
+        k = a[i];
+        z = a[low];
+        a[i] = z;
+        a[low] = k;
+
+        for (int h = 0; h < a.length; h++){
+            System.out.print(a[h]+",");
+        }
+        System.out.println();
+
+        return i;
     }
 }
