@@ -1,5 +1,3 @@
-package com.company;
-
 public abstract class Student {
 
     private int ID;

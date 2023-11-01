@@ -1,6 +1,4 @@
-package com.company;
-
-public class Graduate extends Student{
+public class Graduate extends Student {
     private String status;
     
     public Graduate(){

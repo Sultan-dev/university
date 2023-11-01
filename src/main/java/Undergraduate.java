@@ -1,6 +1,4 @@
-package com.company;
-
-public class Undergraduate extends Student{
+public class Undergraduate extends Student {
 
     private String status;
 
@@ -22,6 +20,4 @@ public class Undergraduate extends Student{
             return "Probation";
         }
     }
-
-
 }
