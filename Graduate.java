@@ -1,9 +1,8 @@
 package com.company;
 
 public class Graduate extends Student{
-
     private String status;
-
+    
     public Graduate(){
         super();
     }
@@ -20,6 +19,4 @@ public class Graduate extends Student{
             return "Probation";
         }
     }
-
-
 }
